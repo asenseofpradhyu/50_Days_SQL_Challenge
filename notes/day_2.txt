@@ -1,0 +1,46 @@
+50 days SQL Challenge
+
+Day-2
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Write an SQL query to find a list of patients' first_name, last_name, and allergies who are from the city of Hamilton and have non-null values in the allergies column.
+
+💡Solution 
+
+SELECT first_name, last_name, allergies FROM patients WHERE city = 'Hamilton' AND allergies IS NOT NULL
+
+📝 Explanation
+
+Here, The challenge is to retrieve the first and last names and allergies of patients living in Hamilton City, excluding rows with null values in the allergies column due to varying allergy status among patients.
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT first_name, last_name, allergies
+
+This part of the SQL query specifies the columns you want to retrieve from the "patients" table. Therefore, this query will return a list of "first_name", "last_name" and "allergies" columns based on certain criteria.
+
+▶️ FROM patients
+
+This part of the query indicates that you want to retrieve data from a table named "patients.
+
+▶️ WHERE city = 'Hamilton' AND allergies IS NOT NULL
+
+This part of the query filters the data based on a specific condition: It retrieves data for patients from Hamilton City, excluding rows with NULL entries in the 'allergies' column from the patient table.
+
+WHERE:- This is clause to filter rows based on specific condition. In our query the condition is 'city = 'Hamilton' AND allergies IS NOT NULL'.
+
+IS NOT NULL:- Use this to exclude rows with NULL values. It functions similarly to the 'IS NOT NULL' operator in the WHERE clause.
+
+If you want to include rows with NULL values, use the 'IS NULL' operator in the WHERE clause.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu

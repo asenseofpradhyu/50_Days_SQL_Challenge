@@ -1,0 +1,45 @@
+50 days SQL Challenge
+
+Day-1
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+1. Retrieve the first_name and last_name of patients.
+2. The query should only select patients whose weight is within the range of 100 to 120 (inclusive).
+
+💡Solution 
+
+SELECT first_name, last_name FROM patients WHERE weight BETWEEN 100 AND 120
+
+📝 Explanation
+
+Here, the challenge is to extract the first and last names of patients with a weight within the range of 100 to 120.
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT first_name, last_name
+
+This part of the SQL query specifies the columns you want to retrieve from the "patients" table. Therefore, this query will return a list of "first_name" and "last_name" columns based on certain criteria.
+
+▶️ FROM patients
+
+This part of the query indicates that you want to retrieve data from a table named "patients.
+
+▶️ WHERE weight BETWEEN 100 AND 120
+
+This part of the query filters the data based on a specific condition: it retrieves data where the "weight" column falls within the range of 100 to 120.
+
+WHERE:- This is clause to filter rows based on specific condition. In our query the condition is 'weight BETWEEN 100 AND 120'.
+
+BETWEEN:- This is used to define range condition and its followed by two values separated by "AND" keyword.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
