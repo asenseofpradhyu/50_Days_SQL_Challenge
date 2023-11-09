@@ -1,0 +1,49 @@
+50 days SQL Challenge
+
+Day-4
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Retrieve the first_name, last_name, and height of the patient with the greatest height.
+
+
+💡Solution 
+
+SELECT first_name, last_name, MAX(height) AS height FROM patients
+
+📝 Explanation
+
+Here, The challenge is to retrieve the first name, last name, and height of the patient with the greatest height among the patients.
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT first_name, last_name, MAX(height) as height
+
+This part of the SQL query specifies the columns you want to retrieve from the "patients" table. Therefore, this query will return a single row with first name, last name and height of whose patient has max height in the table.
+
+▶️ MAX(height) AS height
+
+Aggregate function in sql are functions that perform a calculate on a set of values and returns a single value and the 'AS' keyword is used to give a column alias, providing a temporary name to a column or a table in the result set.
+
+here are the other aggregate functions
+COUNT(): Counts the number of rows in a result set.
+SUM(): Calculates the sum of values in a numeric column.
+AVG(): Calculates the average of values in a numeric column.
+MIN(): Returns the minimum value in a column.
+MAX(): Returns the maximum value in a column.
+
+▶️ FROM patients
+
+This part of the query indicates that you want to retrieve data from a table named "patients".
+
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
