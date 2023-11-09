@@ -1,0 +1,3 @@
+Retrieve the city, company_name, and contact_name columns from the customers table.
+Filter the records to only include rows where the city name contains the letter 'L'.
+Sort the resulting data set by contact_name in ascending order.

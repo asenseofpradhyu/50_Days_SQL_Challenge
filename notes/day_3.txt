@@ -1,0 +1,51 @@
+50 days SQL Challenge
+
+Day-2
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Your SQL query should fulfill the following requirements:
+
+1. Retrieve the city, company_name, and contact_name columns from the customers table.
+2. Filter the records to only include rows where the city name contains the letter 'L'.
+3. Sort the resulting data set by contact_name in ascending order.
+
+
+💡Solution 
+
+SELECT city, company_name, contact_name FROM customers WHERE city LIKE '%L%' ORDER BY contact_name ASC
+
+📝 Explanation
+
+Here, The challenge is to retrieve the City, Company Name, Contact name from Customers table but we need to filtered the record with city name that contains letter 'L' and we need to sort the records by contact name in ascending order.
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT city, company_name, contact_name
+
+This part of the SQL query specifies the columns you want to retrieve from the "customers" table. Therefore, this query will return a list of "city", "company_name" and "contact_name" columns based on certain criteria.
+
+▶️ FROM customers
+
+This part of the query indicates that you want to retrieve data from a table named "customers".
+
+▶️ WHERE city LIKE '%L%' ORDER BY contact_name ASC
+
+This part of the query filters the data based on a specific condition: It retrieves data for customers from city which has letter "L" included in city name and also data will be in ascending order by contact_name column from the customers table.
+
+WHERE:- This is clause to filter rows based on specific condition. In our query the condition is 'city LIKE '%L%' ORDER BY contact_name ASC'.
+
+LIKE:- Use this to perform pattern matching on a columns name. It allows you to search for a row that match the pattern, rather than exact value and it used with WHERE clause. (using % search for zero or more characters) (using _ search for a single character).
+
+ORDER BY:- Use this to sort the records in ascending or descending order. You can use 'ASC' for Ascending order and 'DESC' for Descending order.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu

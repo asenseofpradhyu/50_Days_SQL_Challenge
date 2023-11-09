@@ -1,0 +1,1 @@
+SELECT city, company_name, contact_name from customers WHERE city LIKE '%L%' ORDER BY contact_name ASC
