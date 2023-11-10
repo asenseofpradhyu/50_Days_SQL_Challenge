@@ -1,0 +1,45 @@
+50 days SQL Challenge
+
+Day-5
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Write a SQL query to show all columns for patients who have specific patient_ids: 1, 45, 534, 879, 1000.
+
+
+💡Solution 
+
+SELECT * FROM patients WHERE patient_id IN (1, 45, 534, 879, 1000)
+
+📝 Explanation
+
+Here, The challenge is to retrieve all columns for patients who have specific patient_ids: 1, 45, 534, 879, 1000.
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT *
+
+This part of the SQL query will return all the column from 'patients' table. the asterisk (*) shorthand notation that is used to select all columns from a specified table. It essentially means "select all."
+
+NOTE:- It's generally a good practice to explicitly list the columns you need in your SELECT statement.
+
+▶️ FROM patients
+
+This part of the query indicates that you want to retrieve data from a table named "patients".
+
+▶️ WHERE patient_id IN (1, 45, 534, 879, 1000)
+
+The IN operator in SQL is used to filter the result set based on a specified list of values. It allows you to write a more concise and readable query when you want to match a value against multiple possibilities.
+This part of the SQL query filters records based on specific patient IDs is 1, 45, 534, 879, and 1000.
+
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu

@@ -1,0 +1,1 @@
+Write a SQL query to show all columns for patients who have specific patient_ids: 1, 45, 534, 879, 1000.
