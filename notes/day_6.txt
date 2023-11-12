@@ -1,0 +1,43 @@
+50 days SQL Challenge
+
+Day-6
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Write an SQL query to show the patient id and the total number of admissions for a patient with a patient_id of 579. Your query should return the patient_id and the total count of admissions for that patient with the column name alias total_admissions
+
+
+💡Solution 
+
+SELECT patient_id, COUNT(admission_date) as total_admissions FROM 'admissions' WHERE patient_id = 579
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT patient_id, COUNT(admission_date) as total_admissions
+
+This part of the SQL query will return patient_id and total number of admission_date as a total_admissions column from 'admissions' table.
+
+COUNT() is an aggregate function that is used to count the number of rows in a result set. Here, we are counting specific column admission_date in admissions table.
+
+
+▶️ FROM admissions
+
+This part of the query indicates that you want to retrieve data from a table named "admissions".
+
+▶️ WHERE patient_id = 579
+
+This part of the SQL query filters records based on patient ID 579.
+
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
