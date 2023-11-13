@@ -1,0 +1,10 @@
+Extract a list of names and countries of customers from USA country and Order the results by the column FirstName in ascending order
+
+Task Details:
+
+Use the table "Customer".
+Retrieve the following columns:
+"FirstName"
+"Country"
+Filter the results to include only customers residing in the 'USA'.
+Order the results by the column "FirstName" in ascending order.

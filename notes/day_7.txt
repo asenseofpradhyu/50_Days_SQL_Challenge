@@ -1,0 +1,43 @@
+50 days SQL Challenge
+
+Day-7
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Retrieve a list of names and countries of customers from the USA, ordering the results by the column 'FirstName' in ascending order
+
+💡Solution 
+
+SELECT FirstName, Country FROM 'Customer' WHERE Country = 'USA' ORDER BY FirstName ASC
+
+📝 Explanation
+
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT FirstName, Country
+
+This part of the SQL query specifies the columns you want to retrieve from the "Customer" table. Therefore, this query will return a list of "FirstName" and "Country" columns based on certain criteria.
+
+▶️ FROM 'Customer'
+
+This part of the query indicates that you want to retrieve data from a table named "Customer.
+
+▶️ WHERE Country = 'USA' ORDER BY FirstName ASC
+
+This part of the query filters the data based on a specific condition: It retrieves data where the 'country' is 'USA' and orders the results in ascending order based on the 'FirstName' column.
+
+WHERE:- This is clause to filter rows based on specific condition. In our query the condition is 'Country = 'USA' ORDER BY FirstName ASC'.
+
+ORDER BY:- Use this to sort the records in ascending or descending order. You can use 'ASC' for Ascending order and 'DESC' for Descending order.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
