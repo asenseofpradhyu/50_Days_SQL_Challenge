@@ -1,0 +1,41 @@
+50 Days SQL Challenge
+
+Day-D
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Write a SQL query to show all the columns from the admissions table where the patient was admitted and discharged on the same day.
+
+💡Solution 
+
+SELECT * FROM 'admissions' WHERE admission_date = discharge_date 
+
+📝 Explanation
+
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT *
+
+This part of the SQL query will return all the column from 'patients' table. the asterisk (*) shorthand notation that is used to select all columns from a specified table. It essentially means "select all."
+
+▶️ FROM 'admissions'
+
+This part of the query indicates that you want to retrieve data from a table named "admissions".
+
+▶️ WHERE admission_date = discharge_date
+
+This part of the query filters the data based on a specific condition: It retrieves data where the patient was admitted and discharged on the same day.
+
+WHERE:- This is clause to filter rows based on specific condition. In our query the condition is 'admission_date = discharge_date'.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
