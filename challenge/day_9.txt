@@ -1,0 +1,1 @@
+Fetch a list of all the unique cities in which the customers live. Results should be ordered alphabetically by the city name.

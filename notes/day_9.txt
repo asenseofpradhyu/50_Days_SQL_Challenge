@@ -1,0 +1,39 @@
+50 Days SQL Challenge
+
+Day-9
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Fetch a list of all the unique cities in which the customers live. Results should be ordered alphabetically by the city name.
+
+💡Solution 
+
+SELECT DISTINCT CITY FROM 'Customer' ORDER BY City ASC
+
+📝 Explanation
+
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT DISTINCT CITY
+
+This SQL query selects all unique values in the "City" column from the "Customer" table. The DISTINCT keyword ensures that each city name appears only once in the result set.
+
+▶️ FROM 'Customer'
+
+This part of the query indicates that you want to retrieve data from a table named "Customer".
+
+▶️ ORDER BY City
+
+ORDER BY:- Use this to sort the records in ascending or descending order. You can use 'ASC' for Ascending order and 'DESC' for Descending order.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
