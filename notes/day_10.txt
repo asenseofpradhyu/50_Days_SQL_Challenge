@@ -1,0 +1,42 @@
+50 Days SQL Challenge
+
+Day-10
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Retrieve all the even-numbered Order_id from the orders table.
+
+💡Solution 
+
+SELECT Order_id FROM 'orders' WHERE MOD(Order_id, 2) = 0
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT Order_id
+
+This SQL query selects Order_id and retrive Even numbered Order_id.
+
+▶️ FROM 'orders'
+
+This part of the query indicates that you want to retrieve data from a table named "orders".
+
+▶️ WHERE MOD(Order_id, 2) = 0
+
+This part of the query filters the data based on a specific condition: It retrieves even numbered Order_id records.
+
+WHERE:- In our query, the condition is 'MOD(Order_id, 2) = 0,' which means it must return the Order_id where the remainder is equal to zero.
+
+MOD:- MOD is used to find the reminder of a division operation. It is particularly useful when dealing with mathematical operations and conditional logic.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
