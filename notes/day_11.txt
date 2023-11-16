@@ -1,0 +1,42 @@
+50 Days SQL Challenge
+
+Day-11
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Retrieve track names and their corresponding album IDs for tracks that have a duration longer than 5 minutes.
+
+💡Solution 
+
+SELECT Name,AlbumId FROM 'track' WHERE Milliseconds > 300000 ORDER BY Name ASC
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT Name,AlbumId
+
+This SQL query selects Name, and AlbumId
+
+▶️ FROM 'track'
+
+This part of the query indicates that you want to retrieve data from a table named "track".
+
+▶️ WHERE Milliseconds > 300000 ORDER BY Name
+
+This part of the query filters the data based on a specific condition: It retrieve track names and their corresponding album IDs for tracks that have a duration longer than 5 minutes.
+
+WHERE:- In our query, the condition is 'Milliseconds > 300000 ORDER BY Name' which means it must return It restricts the result set to only include rows where the 'Milliseconds' column has a value greater than 300,000(Which is 5 minutes).
+
+ORDER BY:- Use this to sort the records in ascending or descending order. You can use 'ASC' for Ascending order and 'DESC' for Descending order.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
