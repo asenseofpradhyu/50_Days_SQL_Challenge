@@ -1,0 +1,1 @@
+SELECT ROUND(AVG(unit_price),2) as average_price, sum(units_in_stock) as total_stock, SUM(discontinued) as total_discontinued  FROM 'products'

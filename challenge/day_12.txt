@@ -1,0 +1,1 @@
+Show the average unit price rounded to 2 decimal places, the total units in stock, and the total discontinued products from the products table.

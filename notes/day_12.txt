@@ -1,0 +1,41 @@
+50 Days SQL Challenge
+
+Day-12
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Show the average unit price rounded to 2 decimal places, the total units in stock, and the total discontinued products from the products table.
+
+💡Solution 
+
+SELECT ROUND(AVG(unit_price),2) as average_price, sum(units_in_stock) as total_stock, SUM(discontinued) as total_discontinued  FROM 'products'
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT ROUND(AVG(unit_price),2) as average_price, sum(units_in_stock) as total_stock, SUM(discontinued) as total_discontinued
+
+This SQL query retrieve the following results:
+
+SELECT ROUND(AVG(unit_price), 2) AS average_price: This part of the query calculates the average unit price for all products in the 'products' table. The ROUND function is used to round the result to two decimal places.
+
+SUM(units_in_stock) AS total_stock: This part calculates the total sum of units in stock for all products in the 'products' table.
+
+SUM(discontinued) AS total_discontinued: This part calculates the total sum of discontinued products in the 'products' table.
+
+▶️ FROM 'products'
+
+This part of the query indicates that you want to retrieve data from a table named "products".
+
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
