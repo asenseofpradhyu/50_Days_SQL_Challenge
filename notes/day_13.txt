@@ -1,0 +1,40 @@
+50 Days SQL Challenge
+
+Day-13
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Show the patient_id and first_name from the patients table where the first_name starts and ends with the letter 's' and is at least 6 characters long and ordered by patient_id in ascending order.
+
+💡Solution 
+
+SELECT patient_id,first_name FROM 'patients' WHERE first_name LIKE 's____%s' ORDER BY patient_id ASC
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT patient_id,first_name 
+
+This part of the SQL query specifies the columns you want to retrieve from the "patients" table. Therefore, this query will return a list of "patient_id" and "first_name" columns based on certain criteria.
+
+▶️ FROM 'patients'
+
+This part of the query indicates that you want to retrieve data from a table named "patients".
+
+▶️ WHERE first_name LIKE 's____%s' ORDER BY patient_id ASC
+
+WHERE:- This is a filtering condition in the WHERE clause. It restricts the result set to only include rows where the 'first_name' column starts with 's,' followed by four characters, and ends with 's.' The underscore (_) is a wildcard representing a single character, and % is a wildcard representing zero or more characters.
+
+ORDER BY:- This part of the query orders the result set based on the 'patient_id' column in ascending order (from the smallest to the largest).
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
