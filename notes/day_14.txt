@@ -1,0 +1,40 @@
+50 Days SQL Challenge
+
+Day-14
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Write an SQL query to display the number of duplicate patients based on their first_name and last_name.
+
+💡Solution 
+
+SELECT first_name, last_name, COUNT(*) as num_of_duplicates FROM patients GROUP BY first_name, last_name HAVING num_of_duplicates > 1;
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT first_name, last_name, COUNT(*) as num_of_duplicates 
+
+This part tells the database to select the columns 'first_name' and 'last_name' from the 'patients' table. It also uses the COUNT(*) function to count the number of occurrences for each unique combination of first name and last name. The result of this count is given an alias 'num_of_duplicates' for clarity.
+
+▶️ FROM 'patients'
+
+This part of the query indicates that you want to retrieve data from a table named "patients".
+
+▶️ GROUP BY first_name, last_name HAVING num_of_duplicates > 1
+
+GROUP BY:- This groups the rows in the table based on unique combinations of first name and last name.
+
+HAVING num_of_duplicates > 1:- It selects only those first and last name combinations where there are multiple patients sharing the same names.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
