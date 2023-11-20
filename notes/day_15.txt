@@ -1,0 +1,40 @@
+50 Days SQL Challenge
+
+Day-15
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+write an SQL query to find patients who have been admitted multiple times for the same diagnosis. You are required to display the patient_id and diagnosis for these cases.
+
+💡Solution 
+
+SELECT patient_id, diagnosis FROM 'admissions' GROUP BY patient_id,diagnosis HAVING COUNT(*) > 1 
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT patient_id, diagnosis 
+
+This part tells the database to select the columns 'patient_id' and 'diagnosis' from the 'admissions' table.
+
+▶️ FROM 'admissions'
+
+This part of the query indicates that you want to retrieve data from a table named "admissions".
+
+▶️ GROUP BY patient_id,diagnosis HAVING COUNT(*) > 1 
+
+GROUP BY:- This groups the rows in the table based on unique combinations of 'patient_id' and 'diagnosis'
+
+HAVING COUNT(*) > 1:- Filters the grouped results to include only those groups where the count of occurrences is greater than 1, meaning there are duplicates.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
