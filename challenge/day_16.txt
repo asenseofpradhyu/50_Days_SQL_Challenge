@@ -1,0 +1,1 @@
+write a SQL query to show all columns for a patient with a patient_id of 542 based on their most recent admission_date.

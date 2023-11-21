@@ -1,0 +1,44 @@
+50 Days SQL Challenge
+
+Day-16
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+write a SQL query to show all columns for a patient with a patient_id of 542 based on their most recent admission_date.
+
+💡Solution 
+
+SELECT * FROM 'admissions' WHERE patient_id = 542 GROUP BY patient_id HAVING MAX(admission_date) 
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT *
+
+This part of the SQL query will return all the column from 'admissions' table. the asterisk (*) shorthand notation that is used to select all columns from a specified table. It essentially means "select all."
+
+▶️ FROM 'admissions'
+
+This part of the query indicates that you want to retrieve data from a table named "admissions".
+
+▶️ WHERE patient_id = 542 GROUP BY patient_id HAVING MAX(admission_date)
+
+This part of the query filters the data based on a specific condition: It retrieves data where the patient data of ID 542 and his most recent admission_date.
+
+WHERE:- This is clause to filter rows based on specific condition. In our query the condition is 'patient_id = 542 GROUP BY patient_id HAVING MAX(admission_date)'.
+
+GROUP BY:- This groups the rows in the table based on unique combinations of 'patient_id'.
+
+MAX(admission_date): The expression MAX(admission_date) calculates the latest or maximum admission date for the patient with the ID 542 in the 'admissions' table.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
