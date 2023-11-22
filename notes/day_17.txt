@@ -1,0 +1,40 @@
+50 Days SQL Challenge
+
+Day-17
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+write an SQL query to find the difference between the largest and smallest weight among patients with the last name 'Maroni'.
+
+💡Solution 
+
+SELECT MAX(weight) - MIN(weight) as weight_delta FROM 'patients' WHERE last_name = 'Maroni'
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT MAX(weight) - MIN(weight) as weight_delta
+
+This part of the SQL query will calculates the weight difference (weight_delta) by subtracting the minimum weight from the maximum weight.
+
+▶️ FROM 'patients'
+
+This part of the query indicates that you want to retrieve data from a table named "patients".
+
+▶️ WHERE last_name = 'Maroni'
+
+This part of the query filters the data based on a specific condition: It retrieves data where the patient last_name is 'Maroni'.
+
+WHERE:- This is clause to filter rows based on specific condition. In our query the condition is 'last_name = 'Maroni''.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu

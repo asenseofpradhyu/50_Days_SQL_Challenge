@@ -1,0 +1,1 @@
+write an SQL query to find the difference between the largest and smallest weight among patients with the last name 'Maroni'.
