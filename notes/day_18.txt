@@ -1,0 +1,44 @@
+50 Days SQL Challenge
+
+Day-18
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+write an SQL query to show the contact_name, address, and city from the customers and the query should only include customers that are NOT from the countries 'Germany', 'Mexico', or 'Spain'.
+
+💡Solution 
+
+SELECT contact_name, address, city FROM 'customers' WHERE country NOT IN ('Germany', 'Mexico', 'Spain')
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT contact_name, address, city
+
+This part tells the database to select the columns 'contact_name', 'address' and 'city' from the 'customers' table.
+
+▶️ FROM 'customers'
+
+This part of the query indicates that you want to retrieve data from a table named "customers".
+
+▶️ WHERE country NOT IN ('Germany', 'Mexico', 'Spain')
+
+This part of the query filters the data based on a specific condition: It retrieves data from the 'country' column, excluding entries where the country is Germany, Mexico, or Spain.
+
+WHERE:- This is clause to filter rows based on specific condition. In our query the condition is 'country NOT IN ('Germany', 'Mexico', 'Spain')'.
+
+NOT IN:- The NOT IN operator is used to exclude rows where a specified column matches any value in a set. This query would return rows where the 'category' is not 'Germany' or 'Mexico' or 'Spain'.
+
+BONUS:- The IN operator is used to include rows where a specified column matches any value in a set.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu

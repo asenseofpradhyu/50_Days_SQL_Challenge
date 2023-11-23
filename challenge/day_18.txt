@@ -1,0 +1,1 @@
+Retrieve the following columns: contact_name, address, and city from the table customers. The query should only include customers that are NOT from the countries 'Germany', 'Mexico', or 'Spain'.
