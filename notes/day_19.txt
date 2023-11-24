@@ -1,0 +1,42 @@
+50 Days SQL Challenge
+
+Day-19
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Write an SQL query to retrieve a list of unique cities where patients in the patients table reside. The catch is, you only need to list cities that start with a vowel (A, E, I, O, U), and sort them in ascending order.
+
+💡Solution 
+
+SELECT DISTINCT city FROM 'patients' WHERE city LIKE 'a%' OR city LIKE 'e%' OR city LIKE 'i%' OR city LIKE 'o%' OR city LIKE 'u%' ORDER BY city asc
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT DISTINCT city
+
+This SQL query selects all unique values in the "City" column from the "Customer" table. The DISTINCT keyword ensures that each city name appears only once in the result set.
+
+▶️ FROM 'patients'
+
+This part of the query indicates that you want to retrieve data from a table named "patients".
+
+▶️ WHERE city LIKE 'a%' OR city LIKE 'e%' OR city LIKE 'i%' OR city LIKE 'o%' OR city LIKE 'u%' ORDER BY city asc
+
+This part of the query filters the data based on a specific condition
+
+WHERE:- This is clause to filter rows based on specific condition. In our query the condition is 'city LIKE 'a%' OR city LIKE 'e%' OR city LIKE 'i%' OR city LIKE 'o%' OR city LIKE 'u%' ORDER BY city asc'.
+
+ORDER BY:- This part of the query orders the result set based on the 'city' column in ascending order (from the smallest to the largest).
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
