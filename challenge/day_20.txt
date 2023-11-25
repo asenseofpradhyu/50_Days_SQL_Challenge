@@ -1,0 +1,1 @@
+Write a SQL query that returns the name of each city and the total number of patients residing in that city with the column name as num_patients. Your query should order the results first by the total number of patients (num_patients) in descending order, and then by the city name in ascending alphabetical order.

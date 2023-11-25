@@ -1,0 +1,40 @@
+50 Days SQL Challenge
+
+Day-20
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Write a SQL query that returns the name of each city and the total number of patients residing in that city with the column name as num_patients. Your query should order the results first by the total number of patients (num_patients) in descending order, and then by the city name in ascending alphabetical order.
+
+💡Solution 
+
+SELECT city, COUNT(patient_id) AS num_patients FROM patients GROUP BY city ORDER BY num_patients DESC, city ASC;
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT city, COUNT(patient_id) AS num_patients
+
+This part of the query selects the 'city' column and counts the number of patients for each city. The result is given an alias 'num_patients' for clarity.
+
+▶️ FROM 'patients'
+
+This part of the query indicates that you want to retrieve data from a table named "patients".
+
+▶️ GROUP BY city ORDER BY num_patients DESC, city ASC;
+
+GROUP BY:- Groups the results by the 'city' column, so the count is aggregated for each unique city.
+
+ORDER BY:- Orders the result set first by the total number of patients (num_patients) in descending order (DESC), and then by the city name in ascending alphabetical order (ASC).
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
