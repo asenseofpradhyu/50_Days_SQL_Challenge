@@ -1,0 +1,1 @@
+SELECT Country, COUNT(*) as CustomerCount FROM 'Customer' GROUP BY Country

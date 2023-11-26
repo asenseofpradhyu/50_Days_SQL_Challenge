@@ -1,0 +1,1 @@
+Write an SQL query that counts the number of customers from each country. You should group the results by Country and order them alphabetically by Country.

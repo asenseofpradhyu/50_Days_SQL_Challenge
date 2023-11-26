@@ -1,0 +1,38 @@
+50 Days SQL Challenge
+
+Day-21
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Write an SQL query that counts the number of customers from each country. You should group the results by Country and order them alphabetically by Country.
+
+💡Solution 
+
+SELECT Country, COUNT(*) as CustomerCount FROM 'Customer' GROUP BY Country
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT Country, COUNT(*) as CustomerCount
+
+This part of the query selects the 'Country' column and counts the number of customers for each country. The result is given an alias 'CustomerCount' for clarity.
+
+▶️ FROM 'Customer'
+
+This part of the query indicates that you want to retrieve data from a table named "Customer".
+
+▶️ GROUP BY Country
+
+GROUP BY:- Groups the results by the 'Country' column, so the count is aggregated for each unique Country.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
