@@ -1,0 +1,38 @@
+50 Days SQL Challenge
+
+Day-22
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Your task is to count the number of invoices generated each year from the Invoice table.
+
+💡Solution 
+
+SELECT strftime('%Y', InvoiceDate) AS Year, COUNT(*) AS InvoiceCount FROM Invoice GROUP BY year
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT Country, COUNT(*) as CustomerCount
+
+This part of the query extracts the year from the InvoiceDate column and gives it an alias Year and counts the number of invoices for each year.
+
+▶️ FROM 'Invoice'
+
+This part of the query indicates that you want to retrieve data from a table named "Invoice".
+
+▶️ GROUP BY Year
+
+GROUP BY:- Groups the results by the extracted year.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu

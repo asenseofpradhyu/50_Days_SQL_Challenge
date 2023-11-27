@@ -1,0 +1,1 @@
+Your task is to count the number of invoices generated each year from the Invoice table.
