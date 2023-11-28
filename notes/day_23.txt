@@ -1,0 +1,42 @@
+50 Days SQL Challenge
+
+Day-23
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Your task is to identify customers from the Customer table who have never made a purchase. This means they do not have any corresponding records in the Invoice table.
+
+💡Solution 
+
+SELECT c.FirstName, c.LastName FROM Customer c LEFT JOIN Invoice i ON c.CustomerId = i.CustomerId WHERE i.CustomerId IS NULL;
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT c.FirstName, c.LastName 
+
+This part of the query selects the columns you want to retrieve from the Customer table.
+
+▶️ FROM 'Customer'
+
+This part of the query specifies the main table as Customer and gives it the alias c.
+
+▶️ LEFT JOIN Invoice i ON c.CustomerId = i.CustomerId
+
+Performs a left join between Customer and Invoice tables based on the CustomerId column. This includes all rows from the left table (Customer) and the matching rows from the right table (Invoice). If there is no match, columns from the right table will contain NULL values.
+
+▶️ WHERE i.CustomerId IS NULL
+
+Filters the results to include only rows where there is no matching record in the Invoice table. This condition ensures that you are selecting customers who have never made a purchase.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu

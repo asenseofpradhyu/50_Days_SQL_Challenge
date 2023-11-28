@@ -1,0 +1,1 @@
+SELECT c.FirstName, c.LastName FROM Customer c LEFT JOIN Invoice i ON c.CustomerId = i.CustomerId WHERE i.CustomerId IS NULL;
