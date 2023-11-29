@@ -1,0 +1,1 @@
+Identify albums that have tracks missing. For the purpose of this challenge, any album that does not have an associated track in the tracks table is considered to have missing tracks.

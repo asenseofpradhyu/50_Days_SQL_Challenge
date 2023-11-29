@@ -1,0 +1,42 @@
+50 Days SQL Challenge
+
+Day-24
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Identify albums that have tracks missing. For the purpose of this challenge, any album that does not have an associated track in the tracks table is considered to have missing tracks.
+
+💡Solution 
+
+SELECT albums.Title as Title FROM Album albums LEFT JOIN Track tracks ON albums.albumId = tracks.albumId WHERE tracks.AlbumId IS NULL;
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT albums.Title as Title
+
+This selects the album title from the Album table and gives it an alias Title.
+
+▶️ FROM 'Album'
+
+This part of the query specifies the main table as Album and gives it the alias albums.
+
+▶️ LEFT JOIN Track tracks ON albums.albumId = tracks.albumId
+
+Performs a left join between Album and Track tables based on the AlbumId column.
+
+▶️ WHERE tracks.AlbumId IS NULL
+
+Filters the results to include only rows where there is no matching record in the Track table. This condition ensures that you are selecting albums that have missing tracks.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
