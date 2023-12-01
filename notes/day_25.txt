@@ -1,0 +1,42 @@
+50 Days SQL Challenge
+
+Day-25
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Identify tracks in the "Track" table that have never been purchased.
+
+💡Solution 
+
+SELECT track_tbl.name FROM 'Track' track_tbl LEFT JOIN InvoiceLine invoiceline_tbl ON  track_tbl.TrackId = invoiceline_tbl.TrackId WHERE invoiceline_tbl.TrackId IS NULL
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT track_tbl.name
+
+This selects the track name from the Track table and gives it an alias Name.
+
+▶️ FROM 'Track'
+
+This part of the query specifies the main table as Track and gives it the alias albums.
+
+▶️ LEFT JOIN InvoiceLine invoiceline_tbl ON  track_tbl.TrackId = invoiceline_tbl.TrackId 
+
+Performs a left join between InvoiceLine and Track tables based on the TrackId column.
+
+▶️ WHERE invoiceline_tbl.TrackId IS NULL
+
+Filters the results to include only rows where there is no matching record in the InvoiceLine table. This condition ensures that you are selecting albums that have missing tracksID.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu

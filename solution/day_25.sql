@@ -1,0 +1,1 @@
+SELECT track_tbl.name FROM 'Track' track_tbl LEFT JOIN InvoiceLine invoiceline_tbl ON  track_tbl.TrackId = invoiceline_tbl.TrackId WHERE invoiceline_tbl.TrackId IS NULL
