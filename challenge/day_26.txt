@@ -1,0 +1,1 @@
+Calculate the total sales for each month from the Invoice table.

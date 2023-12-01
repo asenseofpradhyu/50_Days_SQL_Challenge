@@ -1,0 +1,39 @@
+50 Days SQL Challenge
+
+Day-26
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Calculate the total sales for each month from the Invoice table.
+
+💡Solution 
+
+
+SELECT strftime('%Y-%m', InvoiceDate) AS Month, SUM(Total) AS TotalSale FROM Invoice GROUP BY Month ORDER BY Month;
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT strftime('%Y-%m', InvoiceDate) AS Month, SUM(Total) AS TotalSale
+
+This formats the "InvoiceDate" column into 'YYYY-MM' format using the strftime function and aliases it as "Month". This calculates the total sales for each month by summing up the "Total" column and aliases it as "TotalSales".
+
+▶️ FROM 'Invoice'
+
+This part of the query indicates that you want to retrieve data from a table named "Invoice".
+
+▶️ GROUP BY Month ORDER BY Month
+
+Groups the results by the formatted "Month" column. Orders the result set by the "Month" column in ascending order.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
