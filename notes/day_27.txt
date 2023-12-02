@@ -1,0 +1,44 @@
+50 Days SQL Challenge
+
+Day-27
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Write an SQL query to list the top 5 customers who have the highest number of invoices. Your output should show the first names of these customers alongside the count of their invoices.
+
+💡Solution 
+
+SELECT Customer.FirstName, COUNT(Invoice.InvoiceId) AS InvoiceCount FROM Customer JOIN Invoice ON Customer.CustomerId = Invoice.CustomerId GROUP BY Customer.CustomerId ORDER BY InvoiceCount DESC LIMIT 5;
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT Customer.FirstName, COUNT(Invoice.InvoiceId) AS InvoiceCount
+
+This formats the "InvoiceDate" column into 'YYYY-MM' format using the strftime function and aliases it as "Month". This calculates the total sales for each month by summing up the "Total" column and aliases it as "TotalSales".
+
+▶️ FROM 'Customer'
+
+This part of the query specifies the main table as Customer.
+
+▶️ JOIN Invoice ON Customer.CustomerId = Invoice.CustomerId
+
+Performs an inner join between "Customer" and "Invoice" tables based on the common "CustomerId" column.
+
+▶️ GROUP BY Customer.CustomerId ORDER BY InvoiceCount DESC
+
+Groups the results by customer to count the number of invoices for each customer. Orders the results by the "InvoiceCount" in descending order.
+
+▶️ LIMIT 5
+
+Limits the result set to only 5 rows.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu

@@ -1,0 +1,1 @@
+Write an SQL query to list the top 5 customers who have the highest number of invoices. Your output should show the first names of these customers alongside the count of their invoices.
