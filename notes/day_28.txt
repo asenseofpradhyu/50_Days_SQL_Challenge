@@ -1,0 +1,46 @@
+50 Days SQL Challenge
+
+Day-28
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Your task is to write a SQL query to identify tracks that appear under more than one genre
+
+💡Solution 
+
+SELECT Track.Name, COUNT(DISTINCT Genre.GenreId) AS GenreCount FROM Track JOIN Genre ON Track.GenreId = Genre.GenreId GROUP BY Track.TrackId HAVING GenreCount > 1 ORDER BY Track.TrackId
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶️ SELECT Track.Name, COUNT(DISTINCT Genre.GenreId) AS GenreCount
+
+Selects the name of the tracks from the "Track" table. Counts the number of distinct genres associated with each track and aliases the result as "GenreCount".
+
+▶️ FROM 'Track'
+
+This part of the query indicates that you want to retrieve data from a table named "Track".
+
+▶️ JOIN Genre ON Track.GenreId = Genre.GenreId
+
+Performs an inner join between the "Track" and "Genre" tables based on the common "GenreId" column.
+
+▶️ GROUP BY Track.TrackId
+
+Groups the results by track to count the number of genres associated with each track.
+
+▶️ HAVING GenreCount > 1 ORDER BY Track.TrackId
+
+Filters the results to include only tracks with more than one associated genre and orders the result set by the TrackId
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
