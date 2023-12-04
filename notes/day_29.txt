@@ -1,0 +1,45 @@
+50 Days SQL Challenge
+
+Day-29
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Identify and list the top 5 artists based on their total sales.
+
+💡Solution 
+
+SELECT Artist.Name AS ArtistName, SUM(InvoiceLine.UnitPrice * InvoiceLine.Quantity) AS TotalSales FROM Artist JOIN Album ON Artist.ArtistId = Album.ArtistId JOIN Track ON Album.AlbumId = Track.AlbumId JOIN InvoiceLine ON Track.TrackId = InvoiceLine.TrackId GROUP BY Artist.ArtistId ORDER BY TotalSales DESC LIMIT 5;
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+
+▶︎ SELECT Artist.Name AS ArtistName: Selects the name of the artist from the "Artist" table and aliases it as "ArtistName".
+
+▶︎  SUM(InvoiceLine.UnitPrice * InvoiceLine.Quantity) AS TotalSales: Calculates the total sales for each artist by summing up the product of "UnitPrice" and "Quantity" from the "InvoiceLine" table for tracks associated with each artist. The result is aliased as "TotalSales".
+
+▶︎  FROM Artist: Specifies the "Artist" table as the main table.
+
+▶︎  JOIN Album ON Artist.ArtistId = Album.ArtistId: Performs a join with the "Album" table based on the common "ArtistId" column.
+
+▶︎  JOIN Track ON Album.AlbumId = Track.AlbumId: Performs another join with the "Track" table based on the common "AlbumId" column.
+
+▶︎  JOIN InvoiceLine ON Track.TrackId = InvoiceLine.TrackId: Performs a final join with the "InvoiceLine" table based on the common "TrackId" column.
+
+▶︎  GROUP BY Artist.ArtistId: Groups the results by artist to calculate the total sales for each artist.
+
+▶︎ ORDER BY TotalSales DESC: Orders the result set by "TotalSales" in descending order.
+
+▶︎ LIMIT 5: Limits the output to the top 5 results.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu

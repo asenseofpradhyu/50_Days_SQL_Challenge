@@ -1,0 +1,1 @@
+Identify and list the top 5 artists based on their total sales.
