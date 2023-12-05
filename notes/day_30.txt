@@ -1,0 +1,38 @@
+50 Days SQL Challenge
+
+Day-30
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Your task is to determine the number of line items associated with each invoice.
+
+💡Solution 
+
+SELECT Invoice.InvoiceId, COUNT(InvoiceLine.InvoiceLineId) AS LineCount FROM Invoice JOIN InvoiceLine ON Invoice.InvoiceId = InvoiceLine.InvoiceId GROUP BY Invoice.InvoiceId ORDER BY Invoice.InvoiceId
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶︎ SELECT Invoice.InvoiceId: Selects the "InvoiceId" from the "Invoice" table.
+
+▶︎ COUNT(InvoiceLine.InvoiceLineId) AS LineCount: Counts the number of line items for each invoice by counting the "InvoiceLineId" in the "InvoiceLine" table. The result is aliased as "LineCount."
+
+▶︎ FROM Invoice: Specifies the "Invoice" table as the main table.
+
+▶︎ JOIN InvoiceLine ON Invoice.InvoiceId = InvoiceLine.InvoiceId: Performs a join between the "Invoice" and "InvoiceLine" tables based on the common "InvoiceId" column.
+
+▶︎ GROUP BY Invoice.InvoiceId: Groups the results by "InvoiceId" to count the number of line items for each invoice.
+
+▶︎ ORDER BY Invoice.InvoiceId: Orders the result set by "InvoiceId."
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
