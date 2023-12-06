@@ -1,0 +1,1 @@
+Determine the number of albums associated with each artist in the database

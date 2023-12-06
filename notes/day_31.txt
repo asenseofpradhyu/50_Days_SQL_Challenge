@@ -1,0 +1,38 @@
+50 Days SQL Challenge
+
+Day-31
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Determine the number of albums associated with each artist in the database
+
+💡Solution 
+
+SELECT Artist.Name AS Name, COUNT(Album.AlbumId) AS AlbumCount FROM Artist LEFT JOIN Album ON Artist.ArtistId = Album.ArtistId GROUP BY Artist.ArtistId, Artist.Name ORDER BY Artist.ArtistId
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶︎ SELECT Artist.Name AS ArtistName: Selects the name of the artist from the "Artist" table and aliases it as "Name."
+
+▶︎ COUNT(Album.AlbumId) AS AlbumCount: Counts the number of albums for each artist by counting the "AlbumId" in the "Album" table. The result is aliased as "AlbumCount."
+
+▶︎ FROM Artist: Specifies the "Artist" table as the main table.
+
+▶︎ LEFT JOIN Album ON Artist.ArtistId = Album.ArtistId: Performs a left join between the "Artist" and "Album" tables based on the common "ArtistId" column. This ensures that artists with zero albums are also included in the result.
+
+▶︎ GROUP BY Artist.ArtistId, Artist.Name: Groups the results by "ArtistId" and "Name" to count the number of albums for each artist.
+
+▶︎ ORDER BY Artist.ArtistId: Orders the result set by "ArtistId."
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
