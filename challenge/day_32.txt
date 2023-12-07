@@ -1,0 +1,1 @@
+Show the category name and the average product unit price for each category, rounding the result to two decimal places. The column names must be category_name, average_unit_price and ordered by average_unit_price in descending order

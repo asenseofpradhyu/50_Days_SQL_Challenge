@@ -1,0 +1,38 @@
+50 Days SQL Challenge
+
+Day-32
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Show the category name and the average product unit price for each category, rounding the result to two decimal places
+
+💡Solution 
+
+SELECT categories.category_name, ROUND(AVG(products.unit_price), 2) AS average_unit_price FROM categories JOIN products ON categories.category_id = products.category_id GROUP BY categories.category_id, categories.category_name ORDER BY average_unit_price DESC
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶︎ SELECT categories.category_name: Selects the category name from the "categories" table.
+
+▶︎ ROUND(AVG(products.unit_price), 2) AS average_unit_price: Calculates the average unit price for each category using the AVG aggregate function and rounds the result to two decimal places using the ROUND function. The result is aliased as "average_unit_price."
+
+▶︎ FROM categories: Specifies the "categories" table as the main table.
+
+▶︎ JOIN products ON categories.category_id = products.category_id: Performs a join between the "categories" and "products" tables based on the common "category_id" column.
+
+▶︎ GROUP BY categories.category_id, categories.category_name: Groups the results by "category_id" and "category_name" to calculate the average unit price for each category.
+
+▶︎ ORDER BY average_unit_price DESC: Orders the result set by "average_unit_price" in descending order.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
