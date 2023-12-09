@@ -1,0 +1,1 @@
+SELECT DISTINCT Album.Title AS Title FROM Album JOIN Track ON Album.AlbumId = Track.AlbumId WHERE Track.UnitPrice > (SELECT AVG(UnitPrice) FROM Track) ORDER BY Album.AlbumId ASC

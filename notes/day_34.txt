@@ -1,0 +1,36 @@
+50 Days SQL Challenge
+
+Day-34
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Your task is to list the distinct names of albums from the Album table that contain tracks in the Track table with UnitPrice higher than the average unit price across all available tracks. The result should be sorted by AlbumId in ascending order
+
+💡Solution 
+
+SELECT DISTINCT Album.Title AS Title FROM Album JOIN Track ON Album.AlbumId = Track.AlbumId WHERE Track.UnitPrice > (SELECT AVG(UnitPrice) FROM Track) ORDER BY Album.AlbumId ASC
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶︎ SELECT DISTINCT Album.Title AS Title: Selects the distinct names of albums from the "Album" table and aliases it as "Title."
+
+▶︎ FROM Album: Specifies the "Album" table as the main table.
+
+▶︎ JOIN Track ON Album.AlbumId = Track.AlbumId: Performs a join between the "Album" and "Track" tables based on the common "AlbumId" column.
+
+▶︎ WHERE Track.UnitPrice > (SELECT AVG(UnitPrice) FROM Track): Filters the results to include only tracks with a "UnitPrice" higher than the average unit price across all available tracks.
+
+▶︎ ORDER BY Album.AlbumId ASC: Orders the result set by "AlbumId" in ascending order.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu

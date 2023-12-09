@@ -1,0 +1,1 @@
+Your task is to list the distinct names of albums from the Album table that contain tracks in the Track table with UnitPrice higher than the average unit price across all available tracks. The result should be sorted by AlbumId in ascending order
