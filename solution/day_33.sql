@@ -1,0 +1,1 @@
+SELECT patients.first_name, patients.last_name, province_names.province_name AS province_name patients JOIN province_names ON patients.province_id = province_names.province_id

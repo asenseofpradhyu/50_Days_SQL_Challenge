@@ -1,0 +1,1 @@
+Show first name, last name, and the full province name of each patient

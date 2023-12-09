@@ -1,0 +1,34 @@
+50 Days SQL Challenge
+
+Day-33
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Show first name, last name, and the full province name of each patient
+
+💡Solution 
+
+SELECT patients.first_name, patients.last_name, province_names.province_name AS province_name patients JOIN province_names ON patients.province_id = province_names.province_id
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶︎ SELECT patients.first_name, patients.last_name: Selects the first name and last name from the "patients" table.
+
+▶︎ province_names.full_name AS province_name: Selects the full province name from the "province_names" table and aliases it as "province_name."
+
+▶︎ FROM patients: Specifies the "patients" table as the main table.
+
+▶︎ JOIN province_names ON patients.province_id = province_names.province_id: Performs a join between the "patients" and "province_names" tables based on the common "province_id" columns. This ensures that the province names are replaced with their complete names.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
