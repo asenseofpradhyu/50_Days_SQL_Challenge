@@ -1,0 +1,1 @@
+Retrieve artists without any albums

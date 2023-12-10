@@ -1,0 +1,1 @@
+SELECT Artist.Nam FROM Artist LEFT JOIN Album ON Artist.ArtistId = Album.ArtistId WHERE Album.AlbumId IS NULL ORDER BY Artist.ArtistId

@@ -1,0 +1,36 @@
+50 Days SQL Challenge
+
+Day-35
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Retrieve artists without any albums
+
+💡Solution 
+
+SELECT Artist.Nam FROM Artist LEFT JOIN Album ON Artist.ArtistId = Album.ArtistId WHERE Album.AlbumId IS NULL ORDER BY Artist.ArtistId
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶︎ SELECT Artist.Name: Selects the artist names from the "Artist" table.
+
+▶︎ FROM Artist: Specifies the "Artist" table as the main table.
+
+▶︎ LEFT JOIN Album ON Artist.ArtistId = Album.ArtistId: Performs a left join between the "Artist" and "Album" tables based on the common "ArtistId" column.
+
+▶︎ WHERE Album.AlbumId IS NULL: Filters the results to include only rows where there is no matching record in the "Album" table. This condition ensures that you are selecting artists who haven't released any albums.
+
+▶︎ ORDER BY Artist.ArtistId: Orders the result set by "ArtistId" in ascending order
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
