@@ -1,0 +1,40 @@
+50 Days SQL Challenge
+
+Day-36
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Calculate the total duration of each playlist in milliseconds
+
+💡Solution 
+
+SELECT Playlist.Name AS Name, SUM(Track.Milliseconds) AS TotalDuration FROM Playlist JOIN PlaylistTrack ON Playlist.PlaylistId = PlaylistTrack.PlaylistI JOIN Track ON PlaylistTrack.TrackId = Track.TrackId GROUP BY Playlist.PlaylistId, Playlist.Name ORDER BY Playlist.PlaylistId
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶︎ SELECT Playlist.Name AS Name: Selects the name of the playlist from the "Playlist" table and aliases it as "Name."
+
+▶︎ SUM(Track.Milliseconds) AS TotalDuration: Calculates the total duration for each playlist by summing up the "Milliseconds" column from the "Track" table. The result is aliased as "TotalDuration."
+
+▶︎ FROM Playlist: Specifies the "Playlist" table as the main table.
+
+▶︎ JOIN PlaylistTrack ON Playlist.PlaylistId = PlaylistTrack.PlaylistId: Performs a join between the "Playlist" and "PlaylistTrack" tables based on the common "PlaylistId" column.
+
+▶︎ JOIN Track ON PlaylistTrack.TrackId = Track.TrackId: Performs another join with the "Track" table based on the common "TrackId" column.
+
+▶︎ GROUP BY Playlist.PlaylistId, Playlist.Name: Groups the results by "PlaylistId" and "Name" to calculate the total duration for each playlist.
+
+▶︎ ORDER BY Playlist.PlaylistId: Orders the result set by "PlaylistId."
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
