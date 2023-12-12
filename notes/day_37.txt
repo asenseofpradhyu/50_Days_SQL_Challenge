@@ -1,0 +1,32 @@
+50 Days SQL Challenge
+
+Day-37
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Retrieve the patient_id, first_name, and last_name from the patients table for those individuals whose patient_id does not exist in any rows of the admissions table
+
+💡Solution 
+
+SELECT patient_id, first_name, last_name FROM patients WHERE patient_id NOT IN (SELECT DISTINCT patient_id FROM admissions)
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶︎ SELECT patient_id, first_name, last_name: Selects the patient_id, first_name, and last_name from the "patients" table.
+
+▶︎ FROM patients: Specifies the "patients" table as the main table.
+
+▶︎ WHERE patient_id NOT IN (SELECT DISTINCT patient_id FROM admissions): Filters the results to include only rows where the patient_id does not exist in any rows of the "admissions" table. The subquery (SELECT DISTINCT patient_id FROM admissions) returns a list of patient_ids from the "admissions" table, and NOT IN ensures that only patients who have never been admitted are selected
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu

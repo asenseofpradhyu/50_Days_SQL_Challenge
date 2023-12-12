@@ -1,0 +1,1 @@
+Retrieve the patient_id, first_name, and last_name from the patients table for those individuals whose patient_id does not exist in any rows of the admissions table
