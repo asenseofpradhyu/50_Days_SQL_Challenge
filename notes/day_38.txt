@@ -1,0 +1,36 @@
+50 Days SQL Challenge
+
+Day-38
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Show first_name, last_name, and the total number of admissions attended for each doctor. Every admission has been attended by a doctor.
+
+💡Solution 
+
+SELECT doctors.first_name, doctors.last_name, COUNT(admissions.patient_id) AS admissions_total FROM doctors JOIN admissions ON doctors.doctor_id = admissions.attending_doctor_id GROUP BY doctors.doctor_id, doctors.first_name, doctors.last_name
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶︎ SELECT doctors.first_name, doctors.last_name: Selects the first_name and last_name from the "doctors" table.
+
+▶︎ COUNT(admissions.admission_id) AS admissions_total: Counts the total number of admissions for each doctor using the COUNT() aggregate function. The result is aliased as "admissions_total."
+
+▶︎ FROM doctors: Specifies the "doctors" table as the main table.
+
+▶︎ JOIN admissions ON doctors.doctor_id = admissions.doctor_id: Performs a join between the "doctors" and "admissions" tables based on the common "doctor_id" column.
+
+▶︎ GROUP BY doctors.doctor_id, doctors.first_name, doctors.last_name: Groups the results by "doctor_id," "first_name," and "last_name" to calculate the total number of admissions for each doctor
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
