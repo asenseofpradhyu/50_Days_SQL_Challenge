@@ -1,0 +1,5 @@
+Your task is to categorize each track based on its duration into three categories: 'Short', 'Medium', and 'Long'. This classification should be based on the track's duration (in the "Milliseconds" column) as per the following criteria:
+
+Short: 0 - 120,000 milliseconds (0 - 2 minutes)
+Medium: 120,001 - 300,000 milliseconds (2 - 5 minutes)
+Long: Above 300,000 milliseconds (5 minutes and above)

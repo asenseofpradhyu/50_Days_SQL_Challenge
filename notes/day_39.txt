@@ -1,0 +1,34 @@
+50 Days SQL Challenge
+
+Day-39
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Categorize tracks by duration (Short, Medium, Long)
+
+💡Solution 
+
+SELECT "Name", CASE WHEN "Milliseconds" <= 120000 THEN 'Short' WHEN "Milliseconds" <= 300000 THEN 'Medium' ELSE 'Long' END AS "LengthCategory" FROM "Track" ORDER BY "LengthCategory", "Name"
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶︎ SELECT "Name": Selects the name of the track from the "Track" table.
+
+▶︎ CASE WHEN "Milliseconds" <= 120000 THEN 'Short' WHEN "Milliseconds" <= 300000 THEN 'Medium' ELSE 'Long' END AS "LengthCategory": Uses the CASE statement to categorize tracks based on their duration. If the duration is less than or equal to 120,000 milliseconds, it's categorized as 'Short'. If it's less than or equal to 300,000 milliseconds, it's categorized as 'Medium'. Otherwise, it's categorized as 'Long'. The result is aliased as "LengthCategory."
+
+▶︎ FROM "Track": Specifies the "Track" table as the main table.
+
+▶︎ ORDER BY "LengthCategory", "Name": Orders the result set first by "LengthCategory" in ascending order and then by "Name" in ascending order
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu

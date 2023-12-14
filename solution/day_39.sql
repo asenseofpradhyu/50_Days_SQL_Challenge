@@ -1,0 +1,1 @@
+SELECT "Name", CASE WHEN "Milliseconds" <= 120000 THEN 'Short' WHEN "Milliseconds" <= 300000 THEN 'Medium' ELSE 'Long' END AS "LengthCategory" FROM "Track" ORDER BY "LengthCategory", "Name"
