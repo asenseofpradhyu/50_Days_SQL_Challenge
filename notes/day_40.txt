@@ -1,0 +1,34 @@
+50 Days SQL Challenge
+
+Day-40
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Your task is to calculate the total cost of admissions for patients based on their insurance status
+
+💡Solution 
+
+SELECT CASE WHEN patient_id % 2 = 0 THEN 'Yes' ELSE 'No' END AS has_insurance, SUM(CASE WHEN patient_id % 2 = 0 THEN 10 ELSE 50 END) AS cost_after_insurance FROM admissions GROUP BY has_insurance
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶︎ CASE WHEN patient_id % 2 = 0 THEN 'Yes' ELSE 'No' END AS has_insurance: Uses the CASE statement to label each patient with 'Yes' if they have insurance (even patient_id) and 'No' if they don't.
+
+▶︎ SUM(CASE WHEN patient_id % 2 = 0 THEN 10 ELSE 50 END) AS total_admission_cost: Uses another CASE statement within the SUM function to calculate the total admission cost for each group. For patients with insurance ('Yes'), the cost is $10, and for patients without insurance ('No'), the cost is $50.
+
+▶︎ FROM admissions: Specifies the "admissions" table as the main table.
+
+▶︎ GROUP BY has_insurance: Groups the results by the 'has_insurance' column to calculate the total admission cost for each group
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
