@@ -1,0 +1,38 @@
+50 Days SQL Challenge
+
+Day-41
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+For each day display the total amount of admissions on that day. Display the amount changed from the previous date.
+
+💡Solution 
+
+SELECT admission_date, COUNT(admission_date) AS admission_day, COUNT(admission_date) - LAG(COUNT(admission_date)) OVER (ORDER BY admission_date) AS admission_count_change FROM admissions GROUP BY admission_date ORDER BY admission_date
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶︎ admission_date: Represents the column containing admission dates.
+
+▶︎ COUNT(admission_date) AS admission_day: Uses the COUNT() aggregate function to calculate the total number of admissions for each day.
+
+▶︎ LAG(COUNT(admission_date)) OVER (ORDER BY admission_date) AS admission_count_change: Applies the LAG() window function to the result of the COUNT() function, helping in calculating the difference in the number of admissions from the previous day.
+
+▶︎ FROM admissions: Specifies the "admissions" table as the main table.
+
+▶︎ GROUP BY admission_date: Groups the results by the "admission_date" column to compute the total number of admissions for each day.
+
+▶︎ ORDER BY admission_date: Orders the result set by "admission_date" to present the data in chronological order.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
