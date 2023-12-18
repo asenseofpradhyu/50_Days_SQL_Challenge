@@ -1,0 +1,32 @@
+50 Days SQL Challenge
+
+Day-42
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Sort the province names in ascending order in such a way that the province 'Ontario' is always on top
+
+💡Solution 
+
+SELECT province_name FROM province_names ORDER BY CASE WHEN province_name = 'Ontario' THEN 0 ELSE 1 END, province_name ASC
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶︎ province_name: Represents the column containing province names.
+
+▶︎ ORDER BY CASE WHEN province_name = 'Ontario' THEN 0 ELSE 1 END, province_name ASC: Uses the CASE statement in the ORDER BY clause to sort the result set. The provinces are first sorted based on whether they are 'Ontario' or not. If the province is 'Ontario', it gets assigned a value of 0, otherwise 1. This ensures that 'Ontario' comes first. Then, the result set is further sorted in ascending order based on the province names.
+
+▶︎ FROM province_names: Specifies the "province_names" table as the source
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
