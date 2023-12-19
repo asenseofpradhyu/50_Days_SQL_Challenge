@@ -1,0 +1,36 @@
+50 Days SQL Challenge
+
+Day-43
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Sort the province names in ascending order in such a way that the province 'Ontario' is always on top
+
+💡Solution 
+
+SELECT pn.province_name FROM province_names pn JOIN patients p ON pn.province_id = p.province_id GROUP BY pn.province_name HAVING COUNT(CASE WHEN p.gender = 'M' THEN 1 END) > COUNT(CASE WHEN p.gender = 'F' THEN 1 END)
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶︎ SELECT Clause: pn.province_name: Selects the column representing the province names from the "province_names" table.
+
+▶︎ FROM Clause: province_names pn: Specifies the "province_names" table and assigns the alias "pn" for brevity. patients p ON pn.province_id = p.province_id: Performs a join with the "patients" table based on the common "province_id" column.
+
+▶︎ GROUP BY Clause: GROUP BY pn.province_name: Groups the result set by the province_name column. This is necessary because we are using aggregate functions in the HAVING clause.
+
+▶︎ HAVING Clause: HAVING COUNT(CASE WHEN p.gender = 'M' THEN 1 END) > COUNT(CASE WHEN p.gender = 'F' THEN 1 END): Filters the grouped results based on the condition that the count of male patients is greater than the count of female patients.
+
+This condition is applied using the COUNT function along with the CASE statement. It counts the occurrences of 'M' and 'F' based on the gender column for each province group
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
