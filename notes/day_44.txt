@@ -1,6 +1,6 @@
 50 Days SQL Challenge
 
-Day-43
+Day-44
 
 🔥Challenge 
 
@@ -21,8 +21,6 @@ To solve this, let's break the SQL query into smaller queries.
 ▶︎ UNION ALL: Combines the results of the two SELECT statements. Unlike the regular UNION operator, UNION ALL includes all rows, even if there are duplicates. In this context, it's suitable because a person might be both a patient and a doctor.
 
 ▶︎ SELECT first_name, last_name, 'Doctor' AS role: Retrieves the first_name and last_name columns from the doctors table. The literal string 'Doctor' is assigned as the role for each person in the doctors table.
-
-This condition is applied using the COUNT function along with the CASE statement. It counts the occurrences of 'M' and 'F' based on the gender column for each province group
 
 Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
 
