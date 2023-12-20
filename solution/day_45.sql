@@ -1,0 +1,1 @@
+select City, company_name, contact_name, 'customers' as relationship  from customers union select city, company_name, contact_name, 'suppliers' from suppliers

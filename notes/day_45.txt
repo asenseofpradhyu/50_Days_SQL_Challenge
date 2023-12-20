@@ -1,0 +1,33 @@
+50 Days SQL Challenge
+
+Day-45
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Show the city, company_name, contact_name from the customers and suppliers table merged together. Create a column named "relationship" which contains 'customers' or 'suppliers' depending on the table it came from
+
+💡Solution 
+
+SELECT first_name, last_name, 'Patient' AS role FROM patients UNION ALL SELECT first_name, last_name, 'Doctor' AS role FROM doctors
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶︎ SELECT City, company_name, contact_name, 'customers' AS relationship: Retrieves the columns City, company_name, and contact_name from the customers table. It adds a new column relationship with the constant string value 'customers' for each row.
+
+▶︎ UNION: Combines the results of the two SELECT statements. It ensures that duplicate rows are eliminated, and the result set only includes distinct rows.
+
+▶︎ SELECT first_name, last_name, 'Doctor' AS role: Retrieves the first_name and last_name columns from the doctors table. The literal string 'Doctor' is assigned as the role for each person in the doctors table.
+
+The overall query creates a unified result set with columns for City, company_name, contact_name, and relationship. The relationship column indicates whether each row comes from the customers or suppliers table.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
