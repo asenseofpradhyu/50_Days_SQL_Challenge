@@ -1,0 +1,1 @@
+SELECT I1."CustomerId", I1."InvoiceDate", SUM(I2."Total") AS "RunningTotal" FROM "Invoice" I1 JOIN "Invoice" I2 ON I1."CustomerId" = I2."CustomerId" AND I1."InvoiceDate" >= I2."InvoiceDate" GROUP BY I1."CustomerId", I1."InvoiceDate" ORDER BY I1."CustomerId" ASC, I1."InvoiceDate" ASC

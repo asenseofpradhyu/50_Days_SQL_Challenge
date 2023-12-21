@@ -1,0 +1,1 @@
+Calculate a running total for each customer based on their invoices. This should reflect the cumulative sum of invoice totals for every customer over time.

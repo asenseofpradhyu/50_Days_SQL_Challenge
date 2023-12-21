@@ -1,0 +1,33 @@
+50 Days SQL Challenge
+
+Day-46
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Calculate a running total for each customer based on their invoices. This should reflect the cumulative sum of invoice totals for every customer over time
+
+💡Solution 
+
+SELECT I1."CustomerId", I1."InvoiceDate", SUM(I2."Total") AS "RunningTotal" FROM "Invoice" I1 JOIN "Invoice" I2 ON I1."CustomerId" = I2."CustomerId" AND I1."InvoiceDate" >= I2."InvoiceDate" GROUP BY I1."CustomerId", I1."InvoiceDate" ORDER BY I1."CustomerId" ASC, I1."InvoiceDate" ASC
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶︎ JOIN "Invoice" I2 ON I1."CustomerId" = I2."CustomerId" AND I1."InvoiceDate" >= I2."InvoiceDate": This is a self-join on the Invoice table. It matches invoices of the same customer ("CustomerId") where the invoice date ("InvoiceDate") is less than or equal to the current invoice.
+
+▶︎ SUM(I2."Total") AS "RunningTotal": Calculates the running total by summing the total amount from all invoices with the same customer and earlier or equal invoice dates.
+
+▶︎ GROUP BY I1."CustomerId", I1."InvoiceDate": Groups the results by CustomerId and InvoiceDate, ensuring that the running total is calculated separately for each customer and in the order of invoice dates.
+
+▶︎ ORDER BY I1."CustomerId" ASC, I1."InvoiceDate" ASC: Orders the results by CustomerId and then by InvoiceDate in ascending order, as specified in the challenge.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
