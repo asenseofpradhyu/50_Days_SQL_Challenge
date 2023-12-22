@@ -1,0 +1,32 @@
+50 Days SQL Challenge
+
+Day-47
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Retrieve the latest invoice date for each customer
+
+💡Solution 
+
+SELECT "Customer"."CustomerId", MAX("Invoice"."InvoiceDate") AS "MaxInvoiceDate" FROM "Customer" JOIN "Invoice" ON "Customer"."CustomerId" = "Invoice"."CustomerId" GROUP BY "Customer"."CustomerId" ORDER BY "Customer"."CustomerId" ASC
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶︎ SELECT Clause: "Customer"."CustomerId": Selects the unique identifier of the customer. MAX("Invoice"."InvoiceDate") AS "MaxInvoiceDate": Calculates the maximum (latest) invoice date for each customer using the MAX() aggregate function. This value is aliased as "MaxInvoiceDate".
+
+▶︎ FROM Clause: "Customer": Specifies the "Customer" table. "Invoice" ON "Customer"."CustomerId" = "Invoice"."CustomerId": Performs an INNER JOIN between the "Customer" and "Invoice" tables based on the common "CustomerId" column.
+
+▶︎ GROUP BY Clause: "Customer"."CustomerId": Groups the results by customer, ensuring that the MAX() function is applied to each customer's set of invoices.
+
+▶︎ ORDER BY Clause: "Customer"."CustomerId" ASC: Orders the result set by CustomerId in ascending order.
+
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
