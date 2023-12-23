@@ -1,0 +1,33 @@
+50 Days SQL Challenge
+
+Day-48
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Retrieve the latest invoice date for each customer
+
+💡Solution 
+
+SELECT  t.GenreId,  t.Name AS MaxDurationTrackName FROM  Track t INNER JOIN  (SELECT GenreId, MAX(Milliseconds) AS MaxDuration FROM Track GROUP BY  GenreId) AS MaxDurationPerGenre ON t.GenreId = MaxDurationPerGenre.GenreId AND t.Milliseconds = MaxDurationPerGenre.MaxDuration ORDER BY t.GenreId
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶︎ SELECT Clause: t.GenreId: Selects the GenreId from the "Track" table. t.Name AS MaxDurationTrackName: Selects the track name and aliases it as "MaxDurationTrackName"
+
+▶︎ FROM Clause: "Track" t: Specifies the "Track" table and aliases it as "t"
+
+▶︎ INNER JOIN Clause: MaxDurationPerGenre: This is a subquery that calculates the maximum duration for each genre. It is aliased as "MaxDurationPerGenre". ON t.GenreId = MaxDurationPerGenre.GenreId AND t.Milliseconds = MaxDurationPerGenre.MaxDuration: Specifies the join condition, linking tracks to their corresponding maximum duration for each genre.
+
+▶︎ ORDER BY Clause: ORDER BY t.GenreId: Orders the result set by GenreId
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu

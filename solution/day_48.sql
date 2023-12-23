@@ -1,0 +1,1 @@
+SELECT  t.GenreId,  t.Name AS MaxDurationTrackName FROM  Track t INNER JOIN  (SELECT GenreId, MAX(Milliseconds) AS MaxDuration FROM Track GROUP BY  GenreId) AS MaxDurationPerGenre ON t.GenreId = MaxDurationPerGenre.GenreId AND t.Milliseconds = MaxDurationPerGenre.MaxDuration ORDER BY t.GenreId
