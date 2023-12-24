@@ -1,0 +1,37 @@
+50 Days SQL Challenge
+
+Day-49
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Your task is to pivot the "Title" column from the Employee table and count the number of occurrences of each unique title.
+
+💡Solution 
+
+SELECT SUM(CASE WHEN Title = 'Sales Support Agent' THEN 1 ELSE 0 END) AS SalesAgentCount, SUM(CASE WHEN Title = 'Support Representative' THEN 1 ELSE 0 END) AS SupportAgentCount, SUM(CASE WHEN Title NOT IN ('Sales Support Agent', 'Support Representative') THEN 1 ELSE 0 END) AS OtherTitleCount FROM Employee ORDER BY SalesAgentCount
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶︎ SELECT Clause:
+
+SUM(CASE WHEN Title = 'Sales Support Agent' THEN 1 ELSE 0 END) AS SalesAgentCount: Calculates the count of employees with the title 'Sales Support Agent'.
+
+SUM(CASE WHEN Title = 'Support Representative' THEN 1 ELSE 0 END) AS SupportAgentCount: Calculates the count of employees with the title 'Support Representative'.
+
+SUM(CASE WHEN Title NOT IN ('Sales Support Agent', 'Support Representative') THEN 1 ELSE 0 END) AS OtherTitleCount: Calculates the count of employees with titles other than 'Sales Support Agent' and 'Support Representative'.
+
+▶︎ FROM Clause: Employee: Specifies the "Employee" table.
+
+▶︎ ORDER BY Clause: ORDER BY SalesAgentCount: Orders the result set by the count of employees with the title 'Sales Support Agent'.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu

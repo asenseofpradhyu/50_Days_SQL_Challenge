@@ -1,0 +1,1 @@
+SELECT SUM(CASE WHEN Title = 'Sales Support Agent' THEN 1 ELSE 0 END) AS SalesAgentCount, SUM(CASE WHEN Title = 'Support Representative' THEN 1 ELSE 0 END) AS SupportAgentCount, SUM(CASE WHEN Title NOT IN ('Sales Support Agent', 'Support Representative') THEN 1 ELSE 0 END) AS OtherTitleCount FROM Employee ORDER BY SalesAgentCount
