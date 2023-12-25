@@ -1,0 +1,1 @@
+WITH AlbumTrackCount AS (SELECT il.InvoiceId, t.AlbumId, COUNT(t.TrackId) as TrackCount FROM InvoiceLine il JOIN Track t ON il.TrackId = t.TrackId GROUP BY il.InvoiceId, t.AlbumId HAVING COUNT(t.TrackId) > 1 ) SELECT InvoiceId, COUNT(AlbumId) AS DuplicateAlbumCount FROM AlbumTrackCount GROUP BY InvoiceId ORDER BY InvoiceId

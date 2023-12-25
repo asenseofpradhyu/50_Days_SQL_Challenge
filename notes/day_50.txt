@@ -1,0 +1,37 @@
+50 Days SQL Challenge
+
+Day-50
+
+🔥Challenge 
+
+The challenge is to construct an SQL query to achieve the following:
+
+Identifying Duplicate Tracks from the Same Album in Invoices
+
+💡Solution 
+
+WITH AlbumTrackCount AS (SELECT il.InvoiceId, t.AlbumId, COUNT(t.TrackId) as TrackCount FROM InvoiceLine il JOIN Track t ON il.TrackId = t.TrackId GROUP BY il.InvoiceId, t.AlbumId HAVING COUNT(t.TrackId) > 1 ) SELECT InvoiceId, COUNT(AlbumId) AS DuplicateAlbumCount FROM AlbumTrackCount GROUP BY InvoiceId ORDER BY InvoiceId
+
+📝 Explanation
+
+To solve this, let's break the SQL query into smaller queries.
+
+▶︎ Common Table Expression: AlbumTrackCount: It selects the InvoiceId, AlbumId, and the count of tracks for each combination of InvoiceId and AlbumId where the count of tracks is greater than 1.
+
+▶︎ SELECT Clause: InvoiceId: Selects the unique identifier of the invoice. COUNT(AlbumId) AS DuplicateAlbumCount: Calculates the count of albums with multiple tracks for each invoice.
+
+▶︎ FROM Clause: AlbumTrackCount: References the CTE to use its result set.
+
+▶︎ GROUP BY Clause: InvoiceId: Groups the results by InvoiceId to calculate the count of duplicate albums for each invoice.
+
+▶︎ ORDER BY Clause: ORDER BY InvoiceId: Orders the result set by InvoiceId.
+
+The CTE is used to filter and count albums with multiple tracks for each invoice, and the main query then calculates the count of such albums for each invoice, grouping and ordering the result accordingly.
+
+Let me know what you think! Please share your suggestions or feedback on how I can improve this SQL query or anything else.
+
+Thank you for reading! 🤗
+
+If you found this useful:-
+
+Follow me on Twitter: https://twitter.com/asenseofpradhyu
